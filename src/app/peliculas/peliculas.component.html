@@ -1,0 +1,14 @@
+<h2>Peliculas</h2>
+<input type="text" id="buscador"/>
+<input type="submit" (click)="mostrarPeliculas()"/>
+<input type="submit" (click)="limpiar()" value="Limpiar"/>
+<div>
+  <tr *ngFor="let peli of peliculas.results">
+    <td (click)="actores(peli.id)">{{peli.title}}</td>
+    <td>{{peli.resultType}}</td>
+    <td>{{peli.description}}</td>
+  </tr>
+  <tr *ngFor="let act of actor.actors">
+    <td>{{act.name}}</td>
+  </tr>
+</div>

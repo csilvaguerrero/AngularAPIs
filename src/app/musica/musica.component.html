@@ -1,0 +1,8 @@
+<h2>Música</h2>
+<input type="text" id="musica"/>
+<input type="submit" (click)="listarMusica()" value="Buscar Musica"/>
+
+<tr *ngFor="let music of musica.results">
+    <td>{{music.name}}</td>
+    <br><br><br>
+</tr>
